@@ -12,12 +12,7 @@
     <a href="/edit_user/{{ post.id }}" class="btn btn-info">🖊️</a>
     {% endif %}
     <p class="Input-text">{{ post.email }}</p> 
-    {% if current_user.is_authenticated %}
     <p class="Input-text">{{ current_user.username }}:</p> <hr>
-    {% endif %}
-    {% if not current_user.is_authenticated %}
-    <p class="Input-text">{{ post.username }}:</p> <hr>
-    {% endif %}
     
     </div>
     <div class="post_body text-white  ">
