@@ -305,3 +305,6 @@ p {
 .coolname:hover{
   background-image: linear-gradient(to right, #17125e 0%, #7e144e  51%, #61105d  100%);
 }
+.whitetext{
+    color: white;
+}
