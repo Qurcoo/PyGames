@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tilt Neon';
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #0a081869;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 100;
+}
+.logo {
+    font-size: 32px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 0;
+    height: 2px;
+    transition: 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+.home-bg{
+    background-image: linear-gradient(to right , black 0%, #0b0031 51%, #2a0030 100%);
+    z-index: -1;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #img-pixel{
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+  #introduction-div{
+    color: aliceblue;
+    font-size: 25px;
+    font-style: italic;
+    font-family: 'Teko';
+    margin-left: 800px;
+    margin-top: -300px;
+    max-width: 400px;
+    max-height: 400px;
+  }
+  #introduction-div > h1, h2{
+    display: block;
+  }
+  #introduction-div a{
+    text-decoration: none;
+    color: #4d109c;
+  }
+  #introduction-div a:active{
+    text-decoration: none;
+    color: #2b203a;
+  }  
+  #login-form {
+    max-width: 600px;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top:100px;
+    height: 500px;
+    background-color: rgba(12, 12, 29, 0.795);
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+h1{
+    color: aliceblue;
+    
+}
+p {
+    font-size: 18px;
+    color: #fff;
+}
+.user-password{
+    font-family: 'Tilt Neon';
+    width: 200px;
+    height: 30px;
+    margin: 30px;
+    border-radius: 6px;
+}
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%);
+    margin: auto;
+    padding: 10px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eeeeee49;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .Signup:link {
+    text-decoration: none;
+    color: #2b5876;
+  }
+  .Signup:visited {
+    text-decoration: none;
+    color: #113750;
+  }
+  .Signup:hover {
+    text-decoration: none;
+    color: #2b5876;
+  }
+  .Signup:active {
+    text-decoration: none;
+    color: #2b5876;
+  }
+  .Login-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: url("https://i.pinimg.com/originals/75/43/68/754368051c5dc1b4b951e46ea2834981.jpg") no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+  }
+  .Login-container2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: dark;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+  }
+
+  #checkbox{
+    width:20px;
+    height: 20px;
+    color:white;
+    font-family: 'Tilt Neon';
+    margin-bottom: 20px;
+  }
+  #remember-label{
+    color: white;
+  }
+  #download-bg{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(129, 17, 17);
+    z-index: -1;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #downloadBtn{
+    font-family: 'Tilt Neon';
+    font-size: 100px;
+    border-radius: 20px;
+    background-color: #480a50;
+    margin-top: 250px;
+    margin-left: 150px;
+  }
+  #img-dwnld-pixel{
+    width: 300px;
+    margin-bottom: -100px;
+    margin-left: 100px;
+    animation-name: updown;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+  @keyframes updown{
+    0%{margin-bottom: -150px}
+    50%{margin-bottom: -100px}
+    85%{margin-bottom: -170px;}
+    100%{margin-bottom: -150px;}
+  }
+  #games-bg{
+    width: 100%;
+    min-height: 400vh;
+    background-color: rgb(109, 13, 109);
+    z-index: -1;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+.card-container {
+    width: 100%;
+    max-height: 450px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+
+}
+.card-body{
+  background-color: #474747;
+}
+
+.postColor{
+  width: 100%;
+  height: 100vh;
+  background-color: #0b0031;
+}
+.contOfReg{
+  width: 60%;
+  height: 70vh;
+  background-color: #0b2130;
+  margin-left: 250px;
+  position: relative;
+  top: 100px;
+  border: black 1px solid;
+  border-radius: 10px;
+}
+.userClass{
+  width: 300px;
+  text-align: center;
+  margin-left: 250px;
+  border-radius: 5px;
+}
+.post_head{
+  font-weight: 800;
+  font-size: large;
+}
+.postContainer{
+  border: rgb(119, 119, 119) solid 2px;
+  word-wrap: break-word;
+  max-height: 70vh;
+  border-radius: 10px;
+  height: 70vh;
+  
+}
+
+.File-input{
+  width: 250px;
+  margin-left: 250px;
+}
+.Input-text{
+  margin-left: 10px;
+  font-family: 'Tilt Neon';
+}
+
+.navbarimg{
+  width:60px;
+}
+
+.coolname{
+  background-image: linear-gradient(to right, #490952 0%, #7e144e  51%, #213b81  100%);
+    margin: auto;
+    padding: 5px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eeeeee49;
+    border-radius: 10px;
+    display: block;
+    transition: 1s;
+}
+.coolname:hover{
+  background-image: linear-gradient(to right, #17125e 0%, #7e144e  51%, #61105d  100%);
+}

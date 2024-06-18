@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="postColor">
+<div class="contOfReg">
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.username(class="userClass mb-3", placeholder="შეიყვანეთ იუზერნეიმი   " ) }}<br>
+            {{ form.abtGame(class="form-control text-center h-2", placeholder="დაპოსტეთ ინფორმაცია რომელიმე თამაშზე") }}<br>
+            {{ form.email(class="userClass", placeholder="შეიყვანეთ იმეილი") }}<br><br>
+            {{ form.File_inp.label }}  {{ form.File_inp(class="form-control") }}
+            {{ form.Post(class=("userClass bg-dark")) }}
+        </div>
+    </form>
+</div>
+</div>
+{% endblock %}

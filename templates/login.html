@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="Login-container"></div>
+    <fieldset id="login-form">
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <h1>LOG IN</h1>
+        <p>Please Log-In in order to use our site</p>
+        {{ form.username(class="user-password") }}
+        {{ form.password(class="user-password") }} <br>
+        {{ form.login(class="btn-grad") }}
+            <p>Don't have an account? <a class="Signup" href="/signup" role="link"><span>Create one</span></a></p>
+            <footer>
+                <p>© 2024 PyGames</p>
+        </footer>
+    </form>
+    </fieldset>
+
+{% endblock %}
