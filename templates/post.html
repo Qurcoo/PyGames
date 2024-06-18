@@ -1,3 +1,6 @@
+{% if current_user.is_authenticated %}
+    
+    
 {% extends "base.html" %}
 
 {% block content %}
@@ -16,3 +19,4 @@
 </div>
 </div>
 {% endblock %}
+{% endif %}
