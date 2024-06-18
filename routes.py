@@ -48,7 +48,7 @@ def index4():
             new_user = User(username=form.username.data, password=form.password.data)
             db.session.add(new_user)
             db.session.commit()
-            redirect("/Login")
+            return redirect("/Login")
     return render_template("signup.html", form=form)
 
 
