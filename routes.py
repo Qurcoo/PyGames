@@ -66,7 +66,7 @@ def post():
     
     form = PostForm()
     if form.validate_on_submit():
-        users_post = Uplposts(username=form.username.data, email=form.email.data, File_inp=form.File_inp.data.filename, abtGame=form.abtGame.data)
+        users_post = Uplposts(email=form.email.data, File_inp=form.File_inp.data.filename, abtGame=form.abtGame.data)
         db.session.add(users_post)
         db.session.commit()
         
