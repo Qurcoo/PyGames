@@ -5,7 +5,6 @@ from flask_wtf.file import FileField, FileRequired
 
 class PostForm(FlaskForm):
     File_inp = FileField("ატვირთეთ ფაილი", validators=[DataRequired()])
-    username = StringField("შეიყვანეთ სახელი", validators=[DataRequired(), Length(min=1, max=9)])
     abtGame = StringField("მოგვიყევით თქვენი თამაშის შესახებ", validators=[DataRequired(), Length(min=1, max=100)])
     email = EmailField("შეიყვანეთ მეილი", validators=[DataRequired()])
     Post = SubmitField("ატვირთვა")
