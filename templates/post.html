@@ -7,6 +7,7 @@
     <form method="POST" enctype="multipart/form-data">
         {{ form.hidden_tag() }}
         <div>
+            {{ form.username(class="userClass text-center h-2", placeholder="დაპოსტეთ ინფორმაცია რომელიმე თამაშზე") }}<br>
             {{ form.abtGame(class="form-control text-center h-2", placeholder="დაპოსტეთ ინფორმაცია რომელიმე თამაშზე") }}<br>
             {{ form.email(class="userClass", placeholder="შეიყვანეთ იმეილი") }}<br><br>
             {{ form.File_inp.label }}  {{ form.File_inp(class="form-control") }}
