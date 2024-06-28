@@ -71,7 +71,7 @@ def post():
         db.session.commit()
         
         image = form.File_inp.data
-        image.save(f"{app.root_path}\static\{image.filename}")
+        image.save(f"{app.root_path}\images\{image.filename}")
 
         print(users_post)
     return render_template("post.html", form=form)
