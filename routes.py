@@ -88,14 +88,10 @@ def delete(user_id):
 @app.route("/edit_user/<int:user_id>", methods=["GET", "POST"])
 def edit_user(user_id):
     thispost = Uplposts.query.get(user_id)
-    form = EditUserForm(username=thispost.username, email=thispost.email, abtGame=thispost.abtGame)
+    form = EditUserForm(email=thispost.email, abtGame=thispost.abtGame)
     if form.validate_on_submit():
-        thispost.username = form.username.data
         thispost.email = form.email.data
         thispost.abtGame = form.abtGame.data
-        thispost.File_inp = form.File_inp.data.filename
-        image = form.File_inp.data
-        image.save(f"{app.root_path}\static\{image.filename}")
         db.session.commit()
         return redirect("/posts")
 
