@@ -66,12 +66,9 @@ def post():
     
     form = PostForm()
     if form.validate_on_submit():
-        users_post = Uplposts(email=form.email.data, File_inp=form.File_inp.data.filename, abtGame=form.abtGame.data)
+        users_post = Uplposts(email=form.email.data, abtGame=form.abtGame.data)
         db.session.add(users_post)
         db.session.commit()
-        
-        image = form.File_inp.data
-        image.save(f"{app.root_path}\images\{image.filename}")
 
         print(users_post)
     return render_template("post.html", form=form)
