@@ -4,16 +4,14 @@ from wtforms.validators import DataRequired, Length, equal_to
 from flask_wtf.file import FileField, FileRequired
 
 class PostForm(FlaskForm):
-    File_inp = FileField("ატვირთეთ ფაილი", validators=[DataRequired()])
+    
     abtGame = StringField("მოგვიყევით თქვენი თამაშის შესახებ", validators=[DataRequired(), Length(min=1, max=100)])
     email = EmailField("შეიყვანეთ მეილი", validators=[DataRequired()])
     Post = SubmitField("ატვირთვა")
 
 class EditUserForm(FlaskForm):
-    username = StringField("მომხმარებლის სახელი")
     email = EmailField("თქვენი მეილი")
     abtGame = StringField("ინფორმაცია...")
-    File_inp = FileField("მიუთითეთ ფაილი", validators=[DataRequired()])
     save = SubmitField("ცვლილებების შენახვა")
 
 class RegisterForm(FlaskForm):
