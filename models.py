@@ -11,7 +11,6 @@ class Product(db.Model):
 class Uplposts(db.Model):
     __tablename__ = "uplposts"
     id = db.Column(db.Integer(), primary_key=True)
-    username = db.Column(db.String())
     abtGame = db.Column(db.String())
     email = db.Column(db.String())
 
