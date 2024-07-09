@@ -1,5 +1,6 @@
 from ext import db, login_manager
 from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
 
 class Product(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
@@ -19,6 +20,9 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer(), primary_key=True)
     username = db.Column(db.String())
     password = db.Column(db.String())
+    def __init__(self,username, password):
+        self.username = username
+        self.password = generate_password_hash(password)
 
 @login_manager.user_loader
 def load_user(user_id):
