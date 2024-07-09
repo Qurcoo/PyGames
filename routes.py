@@ -21,7 +21,7 @@ posts = [
 @app.route("/logout")
 def logout():
     logout_user()
-    return redirect("/")
+    return redirect("/Login")
 @app.route("/")
 def index():
     return render_template("main.html")
