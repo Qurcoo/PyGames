@@ -107,7 +107,4 @@ def edit_user(user_id):
 def tbc():
     return redirect("https://www.tbceducation.ge")
 
-if User.username == "giorgi":
-    Role = "Admin"
-else:
-    Role = "user"
+
