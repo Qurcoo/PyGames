@@ -7,7 +7,7 @@
 <div class="contOfReg">
     <div class="postContainer">
 <div class="post_head text-white">
-    {% if current_user.username == "giorgi" %}
+    {% if current_user.role == "admin" %}
     <a class="btn btn-danger" href="/delete/{{ post.id }}">🗑️</a>
     <a href="/edit_user/{{ post.id }}" class="btn btn-info">🖊️</a>
     {% endif %}
