@@ -79,8 +79,8 @@ def post():
 @app.route("/posts", methods=["POST","GET"])
 def uplPosts1():
     posts = Uplposts.query.all()
-    User.query.get(User.role) = role
-    return render_template("posts.html", posts=posts)
+    User.role = role
+    return render_template("posts.html", posts=posts, role=role)
 
 @app.route("/delete/<int:user_id>")
 def delete(user_id):
