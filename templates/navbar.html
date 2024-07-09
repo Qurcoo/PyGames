@@ -12,13 +12,16 @@
         {% if current_user.is_authenticated %}
         <a href="#" class="coolname">{{ current_user.username }}</a>
         {% endif %}
+        {% if current_user.is_authenticated %}
+        <a href="/Login" class="btn-grad">Log out</a>
+        {% endif %}
         {% if not current_user.is_authenticated %}
         <a href="/Login" class="btn-grad">Log in</a>
         {% endif %}
-        {% if current_user.username == "giorgi" %}
+        {% if current_user.role == "admin" %}
         <a href="#">ADMIN</a>
         {% endif %}
-        {% if current_user.username != "giorgi" and current_user.is_authenticated %}
+        {% if current_user.role != "admin" and current_user.is_authenticated %}
         <a href="#">user</a>
         {% endif %}
         
