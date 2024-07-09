@@ -32,7 +32,7 @@ def index2():
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter(User.username == form.username.data).first()
-        if user and user.password == form.password.data:
+        if user and user.check_password(form.password.data):
             login_user(user)
             print(user)
             return redirect("/")
