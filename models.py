@@ -17,12 +17,12 @@ class Uplposts(db.Model):
 
 class User(db.Model, UserMixin):
     __tablename__ = "users"
-    id = db.Column(db.Integer(), primary_key=True)
+    id = db.Column(db.Integer(), primary_key=True, role="user")
     username = db.Column(db.String())
     password = db.Column(db.String())
     role = db.Column(db.String())
     def __init__(self,username, password):
-        self.role = "user"
+        self.role = role
         self.username = username
         self.password = generate_password_hash(password)
 
