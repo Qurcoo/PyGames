@@ -1,5 +1,5 @@
 from ext import app, db
-from models import Product, Uplposts
+from models import Product, Uplposts, User
 
 with app.app_context():
     db.create_all()
