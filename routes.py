@@ -1,6 +1,6 @@
 from flask import render_template, redirect
 from forms import PostForm, EditUserForm, RegisterForm, LoginForm
-from flask_login import login_user
+from flask_login import login_user, logout_user, current_user
 from models import Product, Uplposts, User
 from ext import app, db
 
@@ -18,7 +18,10 @@ posts = [
 
 ]
 
-
+@app.route("/logout")
+def logout():
+    logout_user()
+    return redirect("/")
 @app.route("/")
 def index():
     return render_template("main.html")
